@@ -4,8 +4,42 @@
     padding: 0;
 }
 
+:root {
+    --color-primary: #9792e4;
+    --color-secondary: #0084FD;
+    --color-secondary-light: #B5DDFF;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    background-color: var(--color-secondary);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: #333333;
+    padding: 2rem 0;
+}
+
 .section {
     padding: 2rem 0;
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
 }
 
 .container {
@@ -14,6 +48,193 @@
     padding: 0 1rem;
 }
 
+.margin-top {
+    margin-top: 3.5rem;
+}
+
+.nav-logo img {
+    padding: 0.5rem 0;
+    width: 80%;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links div {
+    padding: 1rem 0.5rem;
+}
+
+.nav-links a, .btn-apple a {
+    text-decoration: none;
+    color: white;
+}
+
+.button a {
+    color: black;
+}
+
+.button {
+    background-color: white;
+    border-radius: 20px;
+    border: 0;
+    padding: 8px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: -16px;
+}
+
+.btn-apple {
+    background-color: var(--color-secondary);
+    padding: 0.5rem;
+    margin: 20px 0;
+    width: 60%;
+}
+
+.btn-apple a {
+    color: white;
+}
+
+.row-no-wrap {
+    display: flex;
+}
+
 .row {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.col-1 {
+    flex-basis: calc(100% / 3 - 1rem);
+}
+
+.col-2 {
+    flex-basis: calc(100% / 3 * 2 - 1rem);
+}
+
+.col-3 {
+    flex-basis: 100%;
+}
+
+.col-half {
+    flex-basis: calc(100% / 2 - 1rem);
+}
+
+.card {
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.bg-secondary-light {
+    background-color: var(--color-secondary-light);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.card-white {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.card-text {
+    text-align: center;
+    color: var(--color-secondary)
+}
+
+.card-icon {
+    font-size: 3rem;
+}
+
+.card-text-grey {
+    color: #5C7081;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.text-padding {
+    padding: 1rem 0;
+}
+
+.img-demo img, .strategic-img img {
+    width: 205px;
+    display: block;
+    margin: auto;
+}
+
+.text-benefits {
+    color: white;
+    text-align: center;
+}
+
+.testimonials img, .img-about-us img {
+    width: 180px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.justify-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-text {
+    width: 560px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 768px;
+    }
+
+    .col-large-half {
+        flex-basis: calc(50% - 1rem);
+    }
+
+    .container-padding-large-default {
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 576px;
+    }
+
+    .col-med-half {
+        flex-basis: calc(50% - 1rem);
+    }
+
+    .col-med-full {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+
+    .section {
+        width: 576px;
+    }
+
+    footer {
+        width: 576px;
+    }
+
+    .col-small-full {
+        flex-basis: 100%;
+    }
 }
