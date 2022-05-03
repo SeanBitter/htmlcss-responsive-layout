@@ -160,6 +160,10 @@ footer {
     line-height: 1.5rem;
 }
 
+.min-height {
+    min-height: 100%;
+}
+
 .text-padding {
     padding: 1rem 0;
 }
@@ -195,7 +199,7 @@ footer {
 
 @media screen and (max-width: 992px) {
     .container {
-        width: 768px;
+        width: 752px;
     }
 
     .col-large-half {
@@ -209,7 +213,7 @@ footer {
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 576px;
+        width: 560px;
     }
 
     .col-med-half {
